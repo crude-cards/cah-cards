@@ -1,0 +1,29 @@
+{
+  "name": "cah-cards",
+  "version": "1.0.0",
+  "description": "Cards Against Humanity cards but as JSON",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "node src/download"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/crude-cards/cah-cards.git"
+  },
+  "keywords": [
+    "crude-cards",
+    "cards",
+    "against",
+    "humanity"
+  ],
+  "author": "Amish Shah <amishshah.2k@gmail.com>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/crude-cards/cah-cards/issues"
+  },
+  "homepage": "https://github.com/crude-cards/cah-cards#readme",
+  "devDependencies": {
+    "superagent": "^3.5.2"
+  }
+}
