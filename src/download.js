@@ -52,13 +52,13 @@ request
 			parsed.cards = parsed.cards.concat(
 				obj.black.map(v => ({
 					type: 0,
-					content: res.body.blackCards[v].text
+					text: res.body.blackCards[v].text
 				}))
 			);
 			parsed.cards = parsed.cards.concat(
 				obj.white.map(v => ({
-					t: 1,
-					content: res.body.whiteCards[v]
+					type: 1,
+					text: res.body.whiteCards[v]
 				}))
 			);
 			fs.writeFile(`./src/cards/${deck}.json`, JSON.stringify(parsed), e => {
