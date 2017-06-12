@@ -49,18 +49,8 @@ request
 			const parsed = { cards: [] };
 			const obj = res.body[deck];
 			parsed.name = obj.name;
-			parsed.cards = parsed.cards.concat(
-				obj.black.map(v => ({
-					type: 0,
-					text: res.body.blackCards[v].text
-				}))
-			);
-			parsed.cards = parsed.cards.concat(
-				obj.white.map(v => ({
-					type: 1,
-					text: res.body.whiteCards[v]
-				}))
-			);
+			parsed.black = obj.black.map(v => (res.body.blackCards[v].text));
+			parsed.white = obj.white.map(v => (res.body.whiteCards[v]));
 			fs.writeFile(`./src/cards/${deck}.json`, JSON.stringify(parsed), e => {
 				decks.pop();
 				if (e) console.error(e);
